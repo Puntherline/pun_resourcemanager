@@ -2,9 +2,10 @@
 Starting FiveM resources with a delay to lessen server hardware load.
 
 ## What it does
-- It reads commands from its own config file.
-- It starts the specified resource and waits for it to be fully started before executing the next command.
-- Adds support for `wait [ms]` in between `ensure` and `start` to lessen server hardware load during startup.
+- Reading commands from its own config file (same format as the server.cfg with ensure, start, etc.)
+- Starting specified resource and waiting for it to be reported as running, only then executing the next command
+- Adding support for `wait [ms]` options to wait between command executions
+- While the resource is processing the config.cfg, it prevents all users from joining
 
 ## Installation
 - Download the resource and install it like any other.
